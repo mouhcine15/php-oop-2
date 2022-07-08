@@ -3,6 +3,9 @@ include __DIR__ . '/classes/Product.php';
 include __DIR__ . '/classes/Cibo.php';
 include __DIR__ . '/classes/Giochi.php';
 include __DIR__ . '/classes/Cuccie.php';
+include __DIR__ . '/classes/User.php';
+include __DIR__ . '/classes/UserLog.php';
+
 
 $food = new Cibo('Croccantini', 20.00, 'Cani', 2023);
 // var_dump($food);
@@ -12,6 +15,14 @@ $toy = new Giochi('Pallina', 10.00, 'Gatti', 'Gomma');
 
 $home = new Cuccie('Cuccia', 50.00, 'Cani', 0.6);
 // var_dump($home);
+
+// $user = new User('Mario', 'Bianchi', 'mario@mail.com');
+// var_dump($user);
+
+$userLog = new UserLog('Marco', 'Rossi', 'marco@mail.com');
+// var_dump($userLog);
+
+
 
 ?>
 <!DOCTYPE html>
@@ -36,6 +47,9 @@ $home = new Cuccie('Cuccia', 50.00, 'Cani', 0.6);
         <div>
             data di scadenza: <?= $food->scadenza?>
         </div>
+        <div>
+            Sconto: <?= $userLog->sconto ?>
+        </div>
         
     </div>
     <div>
@@ -51,7 +65,9 @@ $home = new Cuccie('Cuccia', 50.00, 'Cani', 0.6);
         <div>
             Materiale: <?= $toy->materiale?>
         </div>
-        
+        <div>
+            Sconto: <?= $userLog->sconto ?>
+        </div>
     </div>
     <div>
         <h3>
@@ -65,6 +81,9 @@ $home = new Cuccie('Cuccia', 50.00, 'Cani', 0.6);
         </div>
         <div>
             Grandezza: <?= $home->materiale ?>m^2
+        </div>
+        <div>
+            Sconto: <?= $userLog->sconto ?>
         </div>
         
     </div>
